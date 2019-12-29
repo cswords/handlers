@@ -1,3 +1,3 @@
-module github.com/Good-Will/gateway/handlers
+module github.com/Good-Will/handlers
 
 go 1.12
