@@ -9,7 +9,11 @@ import (
 	"strings"
 )
 
-// NewProxyHandler TODO
+// NewProxyHandler creates a HandlerFunc func object which proxy an HTTP call by a key-value map as the configuration.
+// The configuration should contain 2 fields: target, pathBase.
+// The target field indicates the full URL as the proxy target.
+// The request parameters after ? will be added to the parameters of the target URL.
+// The pathBase field indicates the prefix of the full path of the URL of the original request received, which includes the prefix by router configuration and path by handler configuration.
 func NewProxyHandler(config map[string]string) http.HandlerFunc {
 	target := config["target"]
 	targetURL, err := url.Parse(target)
