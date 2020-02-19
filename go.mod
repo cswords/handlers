@@ -1,3 +1,3 @@
-module github.com/Good-Will/handlers
+module github.com/cswords/handlers
 
 go 1.12
